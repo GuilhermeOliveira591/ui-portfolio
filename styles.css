@@ -1,0 +1,239 @@
+:root {
+  --black: #0D0D0D;
+  --smoke: #252526;
+  --red: #FF0000;
+  --lavender: #BFB0B6;
+  --caramel: #D9AB82;
+  --terracotta: #8C5954;
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--secondary-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  color: var(--caramel);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: var(--smoke);
+  color: var(--caramel);
+  padding: 1em 0;
+}
+
+.site-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.navbar-list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  gap: 2em;
+}
+
+.navbar-item {
+  display: inline-block;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--caramel);
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--terracotta);
+}
+
+.home-section, .about-section, .hability-section, .project-section {
+  padding: 4em 2em;
+  text-align: center;
+  background-color: var(--smoke);
+  border-radius: 20px;
+  max-width: 90vw;
+  margin: 2em auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-title, .about-title, .hability-title, .project-title {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: var(--caramel);
+}
+
+.home-description, .about-description {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 0 auto 2em;
+  max-width: 800px;
+  color: var(--lavender);
+}
+
+.home-contact-button {
+  display: inline-block;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--terracotta);
+  color: var(--caramel);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-contact-button:hover {
+  background-color: var(--caramel);
+  color: var(--terracotta);
+  transform: scale(1.05);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.main-card {
+  background-color: var(--terracotta);
+  color: var(--caramel);
+  padding: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.card-description {
+  font-size: 1em;
+  color: var(--lavender);
+}
+
+.recomendation-section {
+  padding: 4em 2em;
+  text-align: center;
+  background-color: var(--smoke);
+  border-radius: 20px;
+  max-width: 90vw;
+  margin: 2em auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recomendation-title {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: var(--caramel);
+}
+
+.recomendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.recomendation-card {
+  background-color: var(--terracotta);
+  color: var(--caramel);
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recomendation-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recomendation-avatar {
+  width: 50px;
+  height: 50px;
+  background-image: url('images/user-circle.svg');
+  background-size: cover;
+  background-position: center; 
+  background-color: var(--caramel);
+  border-radius: 50%;
+  margin: 0 auto 1em;
+}
+
+.recomendation-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.recomendation-text {
+  font-size: 1em;
+  color: var(--lavender);
+  line-height: 1.6;
+}
+
+.recomendation-more {
+  background-color: var(--caramel);
+  color: var(--terracotta);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.recomendation-more:hover {
+  background-color: var(--terracotta);
+  color: var(--caramel);
+}
+
+@media screen and (min-width: 720px) {
+  .navbar-list {
+      display: flex;
+  }
+
+  .home-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6em 2em;
+  }
+
+  .about-section {
+      text-align: center;
+  }
+}
