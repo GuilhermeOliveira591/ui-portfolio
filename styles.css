@@ -60,7 +60,7 @@ body {
   color: var(--terracotta);
 }
 
-.home-section, .about-section, .hability-section, .project-section {
+.home-section, .about-section, .hability-section, .project-section, .recomendation-section, .contact-section {
   padding: 4em 2em;
   text-align: center;
   background-color: var(--smoke);
@@ -70,7 +70,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.home-title, .about-title, .hability-title, .project-title {
+.home-title, .about-title, .hability-title, .project-title, .recomendation-title, .contact-title {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 1em;
@@ -136,23 +136,6 @@ body {
 .card-description {
   font-size: 1em;
   color: var(--lavender);
-}
-
-.recomendation-section {
-  padding: 4em 2em;
-  text-align: center;
-  background-color: var(--smoke);
-  border-radius: 20px;
-  max-width: 90vw;
-  margin: 2em auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.recomendation-title {
-  font-size: 2.5em;
-  font-weight: 600;
-  margin-bottom: 1em;
-  color: var(--caramel);
 }
 
 .recomendation-grid {
@@ -221,6 +204,112 @@ body {
   color: var(--caramel);
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  align-items: center;
+}
+
+.contact-image {
+  background-color: var(--black);
+  color: var(--caramel);
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.contact-subtitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--caramel);
+}
+
+.contact-description {
+  font-size: 1em;
+  color: var(--lavender);
+  margin-bottom: 1em;
+}
+
+.contact-services {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.contact-service-button {
+  background-color: var(--terracotta);
+  color: var(--caramel);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-service-button:hover {
+  background-color: var(--caramel);
+  color: var(--terracotta);
+}
+
+.contact-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-row {
+  display: flex;
+  gap: 1em;
+}
+
+.contact-input {
+  flex: 1;
+  padding: 0.75em;
+  font-size: 1em;
+  border: 1px solid var(--lavender);
+  border-radius: 5px;
+  background-color: var(--black);
+  color: var(--caramel);
+}
+
+.contact-textarea {
+  padding: 0.75em;
+  font-size: 1em;
+  border: 1px solid var(--lavender);
+  border-radius: 5px;
+  background-color: var(--black);
+  color: var(--caramel);
+  resize: none;
+  height: 100px;
+}
+
+.contact-submit-button {
+  background-color: var(--terracotta);
+  color: var(--caramel);
+  border: none;
+  border-radius: 5px;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-submit-button:hover {
+  background-color: var(--caramel);
+  color: var(--terracotta);
+}
+
 @media screen and (min-width: 720px) {
   .navbar-list {
       display: flex;
@@ -235,5 +324,9 @@ body {
 
   .about-section {
       text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }

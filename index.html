@@ -48,11 +48,11 @@
                 Meu foco está na criação de soluções eficientes e escaláveis, tanto no desenvolvimento de back-end quanto na implementação de front-end responsivo. 
                 Vamos conversar?
             </p>
-            <button class="home-contact-button">Contato</button>
+            <button onclick="window.open('https://linktr.ee/ggomesof_', '_blank')" class="home-contact-button">Contato</button>
         </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="container">
             <h2 class="about-title">Sobre</h2>
             <p class="about-description">
@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <section class="hability-section">
+    <section class="hability-section" id="habilities">
         <div class="container">
             <h2 class="hability-title">Habilidades</h2>
             <div class="card-grid">
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="project-section">
+    <section class="project-section" id="projects">
         <div class="container">
             <h2 class="project-title">Projetos</h2>
             <div class="card-grid">
@@ -159,6 +159,38 @@
                     <p class="recomendation-text">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id sem venenatis, condimentum augue id, ornare velit. Nulla facilisi. Mauris consectetur finibus orci, eu tempor tortor sodales vitae. Duis id varius felis."
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="contact-title">Contato</h2>
+            <div class="contact-grid">
+                <div class="contact-image">
+                    <p>IMAGEM AQUI</p>
+                </div>
+                <div class="contact-form">
+                    <h3 class="contact-subtitle">Serviços</h3>
+                    <p class="contact-description">Selecione o motivo do seu contato</p>
+                    <div class="contact-services">
+                        <button class="contact-service-button">Serviço 1</button>
+                        <button class="contact-service-button">Serviço 2</button>
+                        <button class="contact-service-button">Serviço 3</button>
+                        <button class="contact-service-button">Outros</button>
+                    </div>
+                    <h3 class="contact-subtitle">Seus dados</h3>
+                    <p class="contact-description">Por favor preencha os campos</p>
+                    <form class="contact-form-fields">
+                        <div class="contact-row">
+                            <input type="text" placeholder="Nome" class="contact-input" />
+                            <input type="text" placeholder="Sobrenome" class="contact-input" />
+                        </div>
+                        <input type="text" placeholder="Empresa" class="contact-input" />
+                        <textarea placeholder="Descrição" class="contact-textarea"></textarea>
+                        <button type="submit" class="contact-submit-button">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
