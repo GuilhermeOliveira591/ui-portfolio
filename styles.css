@@ -1,10 +1,17 @@
 :root {
-  --black: #0D0D0D;
-  --smoke: #252526;
+  --light-blue: #17273A;
+  --light-gray: #f2f2f2;
+  --light-orange: #F24F13;
+  --light-brown: #8C6B4D;
+
+  --dark-blue: #031326;  
+  --dark-gray: #b0b0b0;  
+  --dark-orange: #E74912;
+
+  --white: #ffffff;
   --red: #FF0000;
-  --lavender: #BFB0B6;
-  --caramel: #D9AB82;
-  --terracotta: #8C5954;
+  --terracotta: #A63D17;
+  
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
 }
@@ -13,8 +20,8 @@ body {
   font-family: var(--secondary-font);
   margin: 0;
   padding: 0;
-  background-color: var(--black);
-  color: var(--caramel);
+  background-color: var(--dark-blue);
+  color: var(--terracotta);
 }
 
 .container {
@@ -24,15 +31,8 @@ body {
 }
 
 .site-header {
-  background-color: var(--smoke);
-  color: var(--caramel);
+  color: var(--terracotta);
   padding: 1em 0;
-}
-
-.site-title {
-  text-align: center;
-  font-size: 2em;
-  font-weight: 600;
 }
 
 .navbar-list {
@@ -50,58 +50,80 @@ body {
 
 .navbar-link {
   text-decoration: none;
-  color: var(--caramel);
+  color: var(--white);
   font-weight: 500;
   font-size: 1.1em;
   transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-  color: var(--terracotta);
+  color: var(--dark-gray);
 }
 
-.home-section, .about-section, .hability-section, .project-section, .recomendation-section, .contact-section {
+.section-class:nth-of-type(odd) {
+  text-align: center;
+  margin: 2em auto;
+  background-color: var(--dark-blue);
+}
+
+.section-class:nth-of-type(even) {
   padding: 4em 2em;
   text-align: center;
-  background-color: var(--smoke);
-  border-radius: 20px;
-  max-width: 90vw;
   margin: 2em auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+  background-color: var(--white);
+} 
 
-.home-title, .about-title, .hability-title, .project-title, .recomendation-title, .contact-title {
+/* title-class */
+
+.title-class {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 1em;
-  color: var(--caramel);
+} 
+
+.section-class:nth-of-type(odd) .title-class{
+  color: var(--light-gray);
 }
 
-.home-description, .about-description {
+.section-class:nth-of-type(even) .title-class {
+  color: var(--dark-blue); 
+}
+
+/* description-class */
+
+.description-class{
   font-size: 1.2em;
   line-height: 1.8;
-  margin: 0 auto 2em;
+  margin: 0 auto 1em;
   max-width: 800px;
-  color: var(--lavender);
+}
+
+.section-class:nth-of-type(odd) .description-class{
+  color: var(--light-gray);
+}
+
+.section-class:nth-of-type(even) .description-class {
+  color: var(--light-blue); 
 }
 
 .home-contact-button {
-  display: inline-block;
+  align-self: center;
   padding: 0.75em 2em;
   font-size: 1.2em;
   font-weight: 600;
   border: none;
   border-radius: 10px;
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--dark-orange);
+  color: var(--light-gray);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .home-contact-button:hover {
-  background-color: var(--caramel);
-  color: var(--terracotta);
+  background-color: var(--light-orange);
   transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-grid {
@@ -112,8 +134,7 @@ body {
 }
 
 .main-card {
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--dark-orange);
   padding: 1.5em;
   border-radius: 10px;
   cursor: pointer;
@@ -123,6 +144,7 @@ body {
 }
 
 .main-card:hover {
+  background-color: var(--light-orange);
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -131,11 +153,12 @@ body {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 0.5em;
+  color: var(--light-gray);
 }
 
 .card-description {
   font-size: 1em;
-  color: var(--lavender);
+  color: var(--light-gray);
 }
 
 .recomendation-grid {
@@ -146,8 +169,8 @@ body {
 }
 
 .recomendation-card {
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--light-orange);
+  color: var(--terracotta);
   padding: 1.5em;
   border-radius: 10px;
   text-align: center;
@@ -166,7 +189,7 @@ body {
   background-image: url('images/user-circle.svg');
   background-size: cover;
   background-position: center; 
-  background-color: var(--caramel);
+  background-color: var(--terracotta);
   border-radius: 50%;
   margin: 0 auto 1em;
 }
@@ -179,13 +202,13 @@ body {
 
 .recomendation-text {
   font-size: 1em;
-  color: var(--lavender);
+  color: var(--light-gray);
   line-height: 1.6;
 }
 
 .recomendation-more {
-  background-color: var(--caramel);
-  color: var(--terracotta);
+  background-color: var(--terracotta);
+  color: var(--light-orange);
   border: none;
   border-radius: 5px;
   padding: 0.5em 1em;
@@ -200,8 +223,8 @@ body {
 }
 
 .recomendation-more:hover {
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--light-orange);
+  color: var(--terracotta);
 }
 
 .contact-grid {
@@ -212,8 +235,8 @@ body {
 }
 
 .contact-image {
-  background-color: var(--black);
-  color: var(--caramel);
+  background-color: var(--dark-blue);
+  color: var(--terracotta);
   border-radius: 10px;
   padding: 2em;
   text-align: center;
@@ -229,12 +252,12 @@ body {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 0.5em;
-  color: var(--caramel);
+  color: var(--terracotta);
 }
 
 .contact-description {
   font-size: 1em;
-  color: var(--lavender);
+  color: var(--light-gray);
   margin-bottom: 1em;
 }
 
@@ -245,8 +268,8 @@ body {
 }
 
 .contact-service-button {
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--light-orange);
+  color: var(--terracotta);
   border: none;
   border-radius: 5px;
   padding: 0.5em 1em;
@@ -257,8 +280,8 @@ body {
 }
 
 .contact-service-button:hover {
-  background-color: var(--caramel);
-  color: var(--terracotta);
+  background-color: var(--terracotta);
+  color: var(--light-orange);
 }
 
 .contact-form-fields {
@@ -276,26 +299,26 @@ body {
   flex: 1;
   padding: 0.75em;
   font-size: 1em;
-  border: 1px solid var(--lavender);
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
-  background-color: var(--black);
-  color: var(--caramel);
+  background-color: var(--dark-blue);
+  color: var(--terracotta);
 }
 
 .contact-textarea {
   padding: 0.75em;
   font-size: 1em;
-  border: 1px solid var(--lavender);
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
-  background-color: var(--black);
-  color: var(--caramel);
+  background-color: var(--dark-blue);
+  color: var(--terracotta);
   resize: none;
   height: 100px;
 }
 
 .contact-submit-button {
-  background-color: var(--terracotta);
-  color: var(--caramel);
+  background-color: var(--light-orange);
+  color: var(--terracotta);
   border: none;
   border-radius: 5px;
   padding: 0.75em 2em;
@@ -306,8 +329,8 @@ body {
 }
 
 .contact-submit-button:hover {
-  background-color: var(--caramel);
-  color: var(--terracotta);
+  background-color: var(--terracotta);
+  color: var(--light-orange);
 }
 
 @media screen and (min-width: 720px) {
@@ -329,4 +352,5 @@ body {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
+  
 }
