@@ -25,27 +25,26 @@ body {
 }
 
 .container {
+  background-color: yellowgreen;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.site-header {
-  color: var(--terracotta);
-  padding: 1em 0;
+.site-main {
+  margin: 0;
+  padding: 0;
+  background-color: palevioletred;
 }
 
 .navbar-list {
   display: none;
   list-style: none;
-  padding: 0;
+  background-color: var(--red);
+  padding: 0.5em;
   margin: 0;
   justify-content: center;
   gap: 2em;
-}
-
-.navbar-item {
-  display: inline-block;
 }
 
 .navbar-link {
@@ -62,10 +61,11 @@ body {
 
 .section-class:nth-of-type(odd) {
   text-align: center;
-  margin: 2em auto;
-  background-color: var(--dark-blue);
+  /* margin: 2em auto; */
+  margin-top: 0;
+  background-color: var(--red);
 }
-
+/* 
 .section-class:nth-of-type(even) {
   padding: 4em 2em;
   text-align: center;
@@ -73,7 +73,7 @@ body {
   background-color: var(--white);
 } 
 
-/* title-class */
+
 
 .title-class {
   font-size: 2.5em;
@@ -89,7 +89,7 @@ body {
   color: var(--dark-blue); 
 }
 
-/* description-class */
+
 
 .description-class{
   font-size: 1.2em;
@@ -104,7 +104,7 @@ body {
 
 .section-class:nth-of-type(even) .description-class {
   color: var(--light-blue); 
-}
+} */
 
 .home-contact-button {
   align-self: center;
