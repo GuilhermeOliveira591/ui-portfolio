@@ -28,14 +28,20 @@ body {
   color: var(--terracotta);
 }
 
-.navbar-list {
-  display: none;
-  list-style: none;
-  padding: 0.5em;
-  margin: 0;
-  justify-content: center;
-  gap: 2em;
+nav {
+  padding: 1.5em 2em;
 }
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .navbar-link {
   text-decoration: none;
@@ -398,19 +404,6 @@ body {
 .cursor {
   cursor: pointer;
 }
-
-/* @media screen and (min-width: 720px) {
-  .navbar-list {
-    display: flex;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-
-} */
 
 @media screen and (max-width: 720px) {
 
