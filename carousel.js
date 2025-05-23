@@ -1,27 +1,34 @@
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const slidesPerView = 5;
-let currentIndex = 0;
+function carousels() {
+  const carousels = document.querySelectorAll('.carousel');
+  
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
 
-// Função para atualizar a posição
-function updateSlidePosition() {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  const newTransform = -(slideWidth * slidesPerView) * currentIndex;
-  track.style.transform = `translateX(${newTransform}px)`;
+    // Duplicar os slides para loop infinito
+    track.innerHTML += track.innerHTML;
+
+    // Recalcula os slides após duplicação
+    const allSlides = Array.from(track.children);
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const totalSlides = allSlides.length;
+
+    // Ajustar largura do track para caber todos os slides (duplicados)
+    track.style.width = `${slideWidth * totalSlides}px`;
+
+    let position = 0;
+    const speed = 1; // pixels por frame, ajuste para controlar velocidade
+
+    function animate() {
+      position -= speed;
+      // Quando atingir a metade da largura (tamanho original), reinicia posição
+      if (position <= -slideWidth * (totalSlides / 2)) {
+        position = 0;
+      }
+      track.style.transform = `translateX(${position}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
 }
-
-// Função para avançar automaticamente os slides
-function autoSlide() {
-  currentIndex++;
-  // Volta ao início quando chegar ao final
-  if (currentIndex >= Math.ceil(slides.length / slidesPerView)) {
-    currentIndex = 0;
-  }
-  updateSlidePosition();
-}
-
-// Intervalo para rotação automática (exemplo: a cada 3 segundos)
-setInterval(autoSlide, 3000);
-
-// Atualiza a posição inicial dos slides
-updateSlidePosition();

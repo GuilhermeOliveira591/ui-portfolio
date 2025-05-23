@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -50,7 +51,19 @@
                 Meu foco está na criação de soluções eficientes e escaláveis, tanto no desenvolvimento de back-end quanto na implementação de front-end responsivo. 
                 Vamos conversar?
               </p> 
-              <button onclick="window.open('https://linktr.ee/ggomesof_', '_blank')" class="home-contact-button">Contato</button>
+              <div class="button-group">
+                <button onclick="window.open('https://linktr.ee/ggomesof_', '_blank')" class="home-contact-button">
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>Contato
+                </button>
+                <button onclick="window.open('https://calendar.app.google/ZgPQyXpA2rXtAgAw7', '_blank')" class="home-calendar-button">
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>Agende uma reunião
+                </button> 
+              </div>
+              
             </div>
 
             <div class="image-container">
@@ -187,7 +200,7 @@
     <section class="section-class" id="projects">
         <div class="big-container">
             <div class="text-content">
-                <h2 class="title-class">Meus clientes</h2>
+                <h2 class="title-class">Projetos em Destaque</h2>
             </div>
             
             <div class="card-grid">
@@ -208,7 +221,7 @@
             <div class="recomendation-grid">
                 <div class="recomendation-card">
                     <div class="recomendation-avatar"></div>
-                    <h3 class="recomendation-name">Pessoa 1</h3>
+                    <h3 class="recomendation-name">Willian Santos</h3>
                     <p class="recomendation-text">
                         Profissional dedicado e auto-didata. Auto gerenciável, muito perspicaz e atento aos minimos detalhes. Como QA, ajudou muito a equipe a melhorar a
                          qualidade dos produtos que desenvolvemos. Sempre esforçado em melhorar e aprender a cada dia mais.
@@ -216,7 +229,7 @@
                 </div>
                 <div class="recomendation-card">
                     <div class="recomendation-avatar"></div>
-                    <h3 class="recomendation-name">Pessoa 2</h3>
+                    <h3 class="recomendation-name">Tarcísio Maciel</h3>
                     <p class="recomendation-text">
                         O Guilherme é um profissional que é extremamente minucioso, detalhista, atencioso e cuidaso no que faz. Trabalhamos 2 anos juntos e ele teve uma 
                         grande ascensão dentro da equipe onde conquistou um papel fundamental para todos nós como QA e Dev criando testes unitários, automatizados, 
@@ -226,7 +239,7 @@
                 </div>
                 <div class="recomendation-card">
                     <div class="recomendation-avatar"></div>
-                    <h3 class="recomendation-name">Pessoa 3</h3>
+                    <h3 class="recomendation-name">Gabriela Perez</h3>
                     <p class="recomendation-text">
                         Guilherme é um profissional dedicado, organizado e sempre atento o que está acontecendo ao seu redor em prol de ajudar a equipe trazendo resultados. 
                         Pude observar a sua preocupado com entregas de qualidade quando fazia o trabalho de QA para multiplas squads. Sempre está disposto em aprender e 
@@ -235,7 +248,7 @@
                 </div>
                 <div class="recomendation-card">
                     <div class="recomendation-avatar"></div>
-                    <h3 class="recomendation-name">Pessoa 4</h3>
+                    <h3 class="recomendation-name">João Rubens</h3>
                     <p class="recomendation-text">
                         Ao longo dos anos, tive o prazer de ter conhecido e de acompanhar o trabalho do Guilherme, e posso afirmar que ele é um profissional excepcional,
                         cuja dedicação e competência se destacam em tudo o que faz. Guilherme demonstra um profundo conhecimento em sua área de atuação, combinando 
@@ -284,8 +297,6 @@
     </section>
     
   </main>
-
-<script src="carousel.js"></script>
 
 </body>
 </html>
