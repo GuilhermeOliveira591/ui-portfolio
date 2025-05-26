@@ -258,11 +258,26 @@ nav {
 .recomendation-avatar {
   width: 50px;
   height: 50px;
-  background-image: url('images/user-circle.svg');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
   margin: 0 auto 1em;
+}
+
+.avatar-1 {
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFF7uO96Hpqwg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732394373279?e=1753920000&v=beta&t=No-KCUAaoT1fbUrzMwf6MaOBSmxRN0yT82yYRKuDHOc');
+}
+
+.avatar-2 {
+  background-image: url('https://media.licdn.com/dms/image/v2/C4D03AQHHlHfEGgwOow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1654021193700?e=1753920000&v=beta&t=a0L5GpAKW-zsoi5MPkcBZj-FAd4P5d2DRa46hcd_OFE');
+}
+
+.avatar-3 {
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQHnpVsmfnqMdA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679425533517?e=1753920000&v=beta&t=q8-oOGN-OzDze4JnvWPjVFO8HlTHCp7ZubnzDooIfsU');
+}
+
+.avatar-4 {
+  background-image: url('https://media.licdn.com/dms/image/v2/D5603AQGxX-F1p8r-HQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724794826803?e=1753920000&v=beta&t=CJ9bH3WBEd_FwRARn7zNCRct3pVur4YQP6a_GXiJrA0');
 }
 
 .recomendation-name {
