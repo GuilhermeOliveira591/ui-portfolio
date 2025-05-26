@@ -92,7 +92,9 @@ nav {
   flex: 1 1 50%;
   gap: 1.5em;
   padding: 2em;
+  justify-content: flex-start;
 }
+
 
 .title-class {
   font-size: 2.5em;
@@ -115,7 +117,7 @@ nav {
 }
 
 .section-class:nth-of-type(odd):not(:first-of-type) {
-  padding: 2.5em;
+  padding: 2em;
 }
 
 .section-class:nth-of-type(even) {
@@ -142,7 +144,6 @@ nav {
 .big-container-habilities {
   align-items: center;
   justify-content: center;
-  padding: 2em;
 }
 
 .button-group {
@@ -414,20 +415,12 @@ nav {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding: 4.5em;
 }
 
 .carousel-track {
   display: flex;
-  animation: scroll-left 20s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  width: auto;
 }
 
 .carousel-slide {

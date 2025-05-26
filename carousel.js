@@ -1,34 +1,50 @@
 function carousels() {
   const carousels = document.querySelectorAll('.carousel');
-  
+
   carousels.forEach(carousel => {
     const track = carousel.querySelector('.carousel-track');
     const slides = Array.from(track.children);
 
-    // Duplicar os slides para loop infinito
-    track.innerHTML += track.innerHTML;
+    // Calcula largura total dos slides originais (com margens)
+    let totalWidth = 0;
+    slides.forEach(slide => {
+      const style = getComputedStyle(slide);
+      const width = slide.getBoundingClientRect().width;
+      const marginRight = parseFloat(style.marginRight);
+      totalWidth += width + marginRight;
+    });
 
-    // Recalcula os slides após duplicação
+    // Duplica os slides até o track ter largura >= 3x o totalWidth original
+    let currentWidth = totalWidth;
+    while (currentWidth < totalWidth * 3) {
+      track.innerHTML += track.innerHTML;
+      currentWidth *= 2;
+    }
+
+    // Agora, pegar todos os slides de novo, após múltiplas duplicações
     const allSlides = Array.from(track.children);
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    const totalSlides = allSlides.length;
 
-    // Ajustar largura do track para caber todos os slides (duplicados)
-    track.style.width = `${slideWidth * totalSlides}px`;
+    // Ajustar a largura do track para conter todos os slides
+    track.style.width = `${currentWidth}px`;
 
     let position = 0;
-    const speed = 1; // pixels por frame, ajuste para controlar velocidade
+    const speed = 2.5; // pixels por frame
 
     function animate() {
       position -= speed;
-      // Quando atingir a metade da largura (tamanho original), reinicia posição
-      if (position <= -slideWidth * (totalSlides / 2)) {
+
+      // Resetar a posição quando atingir metade do track para loop suave
+      if (position <= -currentWidth / 2) {
         position = 0;
       }
+
       track.style.transform = `translateX(${position}px)`;
+
       requestAnimationFrame(animate);
     }
 
     animate();
   });
 }
+
+window.addEventListener('load', carousels);
