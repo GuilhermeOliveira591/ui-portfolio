@@ -82,7 +82,7 @@ nav {
 }
 
 .image-container img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -218,8 +218,7 @@ nav {
 }
 
 .main-card:hover {
-  background-color: var(--dark-gray);
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -394,15 +393,6 @@ nav {
   background-color: var(--light-orange);
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.somatix {
-  background-image: url('images/somatix-logo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
 }
 
 .carousel {
