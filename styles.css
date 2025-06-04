@@ -294,35 +294,19 @@ nav {
   line-height: 1.6;
 }
 
+.contact-form {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .contact-grid {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
   flex-wrap: wrap;
-}
-
-.contact-image {
-  flex: 1 1 30%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.contact-image img {
-  display: block;
-  margin: 0;
-  padding: 0;
-  max-width: 95%;
-  margin-top: -100px;
-  height: auto;
-}
-
-.contact-form {
-  flex: 1 1 65%;
-  text-align: left;
-  margin-left: -2rem;
 }
 
 .contact-subtitle {
@@ -339,9 +323,13 @@ nav {
 }
 
 .contact-services {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   gap: 1em;
-  margin-bottom: 2em;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 .contact-service-button {
@@ -374,7 +362,8 @@ nav {
   gap: 1em;
 }
 
-.contact-input {
+
+.contact-input-name, .contact-input-lastname, .contact-input-email, .contact-input-empresa {
   flex: 1;
   padding: 0.75em;
   font-size: 1em;
@@ -383,19 +372,27 @@ nav {
   color: var(--light-gray);
 }
 
+.contact-input::placeholder, .contact-input-lastname::placeholder, .contact-input-empresa::placeholder, .contact-input-email::placeholder, .contact-textarea::placeholder {
+  font-style: normal;
+  opacity: 0.8;
+}
+
 .contact-textarea {
   padding: 0.75em;
-  font-size: 1.4em;
+  font-size: 1em;
   border-radius: 5px;
   background-color: var(--dark-blue);
   color: var(--light-gray);
   height: 200px;
   resize: none;
+  font-family: inherit;
 }
 
 .contact-submit-button {
   background-color: var(--dark-orange);
   color: var(--light-gray);
+  width: 50%;
+  margin: 0 auto;
   border: none;
   border-radius: 5px;
   padding: 0.75em 2em;
