@@ -208,6 +208,8 @@ nav {
 }
 
 .main-card {
+  position: relative;
+  overflow: hidden;
   background-color: var(--white);
   padding: 1.5em;
   border-radius: 10px;
@@ -218,16 +220,65 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.main-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.main-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(30, 30, 30, 0.75); /* Fundo escuro com 75% de opacidade */
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2; 
+    pointer-events: none;  
+  }
+
+.main-card::after {
+    content: 'Ver Projeto ↗';
+    position: absolute;
+    inset: 0;
+    
+    /* Centraliza o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: 500;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3; 
+
+    text-decoration: underline;
+    pointer-events: none;
+}
+
+
+/* 4. A ANIMAÇÃO (FAZ A SOBREPOSIÇÃO VISUAL APARECER NO HOVER) */
+.main-card:hover::before,
+.main-card:hover::after {
+    opacity: 1; /* Torna as camadas visuais visíveis */
+}
+
+.main-card .card-title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* Fica acima do conteúdo original, garantindo que seja clicado */
 }
 
 .card-title {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 0.5em;
-  color: var(--dark-blue);
+  /* color: var(--dark-blue); */
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #ffc0cb;
 }
 
 .card-description {
@@ -266,23 +317,23 @@ nav {
 }
 
 .avatar-1 {
-  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFp58phj_uaRA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1726978864226?e=1756944000&v=beta&t=3y_cjzV4quG8VpiMW4ro0lpaaG2_KZVqUKGAcwbNlGI');
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFp58phj_uaRA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726978864246?e=1762387200&v=beta&t=olIasLfdNTeIhgW4M0XFubrLV35L4USsP2L712Hwl6U');
 }
 
 .avatar-2 {
-  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFF7uO96Hpqwg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732394373279?e=1756944000&v=beta&t=_35hunSoB1A7_shkfpbHg4HQx_X0cktWAhfN3YEhV2Y');
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFF7uO96Hpqwg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1732394373252?e=1762387200&v=beta&t=6I9va7_UUsjh4nVt4g9lIKCQovwn6vvlxDd6LYulFTQ');
 }
 
 .avatar-3 {
-  background-image: url('https://media.licdn.com/dms/image/v2/C4D03AQHHlHfEGgwOow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1654021193700?e=1756944000&v=beta&t=cTBF7RA7Qiu9bsIdP94WAO9OK8REOGm0FHjjUzV82KQ');
+  background-image: url('https://media.licdn.com/dms/image/v2/C4D03AQHHlHfEGgwOow/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1654021193700?e=1762387200&v=beta&t=K6KK4jtF67ehzSK1ZreXJVcI1ljD4ZmLfyhdSHSLmoU');
 }
 
 .avatar-4 {
-  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQHnpVsmfnqMdA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1679425533517?e=1756944000&v=beta&t=yXilvy8R8Dj0v3OZWh0sjeFG2013OM1m7rBAZ_Ks4Ec');
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQHnpVsmfnqMdA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1679425533517?e=1762387200&v=beta&t=HuGKzd59oCGN4P1FKhSC2-gquE18qStTaPF3zYYB88U');
 }
 
 .avatar-5 {
-  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQG2n2mozXwTqA/profile-displayphoto-scale_400_400/B4DZeiB_6aGsAg-/0/1750770123642?e=1756944000&v=beta&t=eRQ3QsrbeyRRrTazjmMwhiR0TXE8dHVcZzqlsw6TK-8');
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQE1i91TL9Kg-A/profile-displayphoto-crop_800_800/B4DZjwUiX.IEAI-/0/1756378573601?e=1762387200&v=beta&t=0WUJw9viqhFnhXIj-g5m-YgvcmWmIchFQGEzjbGl0jc');
 }
 
 .recomendation-name {
