@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -238,26 +239,12 @@
 
                 <div class="card-grid">
                     <div class="main-card">
-                        <!-- <h3 class="card-title" style="color: #ffc0cb;">
-                            Bingo outubro rosa
-                            <a href="https://bingo-outubro-rosa.vercel.app/" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                title="Clique para ver o projeto" >
-                
-                                
-                                
-                            </a>
-                        </h3> -->
-
                         <h3 class="card-title">
-                            <a href="https://bingo-outubro-rosa.vercel.app/" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                            <a href="https://bingo-outubro-rosa.vercel.app/" target="_blank" rel="noopener noreferrer"
                                 title="Clique para ver o projeto">
 
-                                Bingo Outubro Rosa <i class="fas fa-ribbon" style="color: #ffc0cb;"></i> 
-                                
+                                Bingo Outubro Rosa <i class="fas fa-ribbon" style="color: #ffc0cb;"></i>
+
                             </a>
                         </h3>
 
@@ -276,6 +263,8 @@
                         <h3 class="card-title">Projeto 2</h3>
                         <p class="card-description">Aguarde</p>
                     </div>
+
+
 
                 </div>
             </div>
@@ -354,41 +343,56 @@
             </div>
 
             <div class="contact-grid">
-
                 <div class="contact-form">
-                    <h3 class="contact-subtitle">Serviços</h3>
-                    <p class="contact-description">Selecione o motivo do seu contato</p>
 
-                    <div class="contact-services">
-                        <button type="button" class="contact-service-button">Entrevista</button>
-                        <button type="button" class="contact-service-button">Frontend</button>
-                        <button type="button" class="contact-service-button">Backend</button>
-                        <button type="button" class="contact-service-button">Outros</button>
-                    </div>
+                    <form id="contact-form">
 
-                    <h3 class="contact-subtitle">Seus dados</h3>
-                    <p class="contact-description">Por favor preencha os campos</p>
-                    <form class="contact-form-fields">
-                        <div class="contact-row">
-                            <input type="text" placeholder="Nome" class="contact-input-name" />
-                            <input type="text" placeholder="Sobrenome" class="contact-input-lastname" />
-                        </div>
-                        <div class="contact-row">
-                            <input type="text" placeholder="E-mail" class="contact-input-email" />
-                            <input type="text" placeholder="Empresa" class="contact-input-empresa" />
+                        <h3 class="contact-subtitle">Serviços</h3>
+                        <p class="contact-description">Selecione o motivo do seu contato</p>
+
+                        <div class="contact-services">
+                            <button type="button" class="contact-service-button"
+                                data-service="Entrevista">Entrevista</button>
+                            <button type="button" class="contact-service-button"
+                                data-service="Frontend">Frontend</button>
+                            <button type="button" class="contact-service-button" data-service="Backend">Backend</button>
+                            <button type="button" class="contact-service-button" data-service="Outros">Outros</button>
                         </div>
 
-                        <textarea placeholder="Descrição" class="contact-textarea"></textarea>
+                        <input type="hidden" name="contact_service" id="contact_service">
+
+                        <h3 class="contact-subtitle">Seus dados</h3>
+                        <p class="contact-description">Por favor preencha os campos</p>
+
+                        <div class="contact-row">
+                            <input type="text" name="user_name" placeholder="Nome" class="contact-input-name"
+                                required />
+                            <input type="text" name="user_lastname" placeholder="Sobrenome"
+                                class="contact-input-lastname" required />
+                        </div>
+                        
+                        <div class="contact-row">
+                            <input type="email" name="user_email" placeholder="E-mail" class="contact-input-email"
+                                required />
+                            <input type="text" name="user_company" placeholder="Empresa"
+                                class="contact-input-empresa" />
+                        </div>
+
+                        <textarea name="message" placeholder="Descrição" class="contact-textarea" required></textarea>
+
                         <button type="submit" class="contact-submit-button">Enviar</button>
+
                     </form>
                 </div>
             </div>
+
         </section>
 
     </main>
 
-</body>
+    <script src="carousel.js"></script>
+    <script src="logic.js" type="module"></script>
 
-<script src="carousel.js"></script>
+</body>
 
 </html>

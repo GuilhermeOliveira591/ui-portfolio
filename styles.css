@@ -406,6 +406,12 @@ nav {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.contact-service-button.active {
+    background-color: #007bff; /* Ou a cor que preferir */
+    color: white;
+    border-color: #007bff;
+}
+
 .contact-form-fields {
   display: flex;
   flex-direction: column;
@@ -414,6 +420,7 @@ nav {
 
 .contact-row {
   display: flex;
+  margin-bottom: 0.9em;
   gap: 1em;
 }
 
@@ -441,13 +448,16 @@ nav {
   height: 200px;
   resize: none;
   font-family: inherit;
+
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 .contact-submit-button {
   background-color: var(--dark-orange);
   color: var(--light-gray);
   width: 50%;
-  margin: 0 auto;
+  margin: 0.9em auto;
   border: none;
   border-radius: 5px;
   padding: 0.75em 2em;
