@@ -42,6 +42,7 @@ contactForm.addEventListener('submit', function(event) {
             alert('E-mail enviado com sucesso!');
             contactForm.reset();
             serviceButtons.forEach(btn => btn.classList.remove('active'));
+            location.reload();
         }, (err) => {
             alert('Ocorreu um erro ao enviar o e-mail. Tente novamente.');
             console.error('EmailJS Error:', JSON.stringify(err));
