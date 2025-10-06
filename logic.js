@@ -1,5 +1,5 @@
 // O import continua o mesmo
-import * as emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+import emailjs from '@emailjs/browser';
 
 // --- CHAVES PUXADAS DAS VARIÁVEIS DE AMBIENTE DA VERCEL ---
 // O código agora pega as chaves do ambiente de deploy
